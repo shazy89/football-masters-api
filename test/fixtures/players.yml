@@ -4,10 +4,8 @@ one:
   playername: MyString
   position: MyString
   team_id: 1
-  team_id: 1
 
 two:
   playername: MyString
   position: MyString
-  team_id: 1
   team_id: 1
