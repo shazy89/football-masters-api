@@ -36,7 +36,6 @@ class PlayersController < ApplicationController
   # DELETE /players/1
   def destroy
     @player.destroy
-    render json: @player
   end
 
   private
@@ -47,6 +46,6 @@ class PlayersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def player_params
-      params.require(:player).permit(:player, :trainer_id, :playerName, :position, :league_id)
+      params.require(:player).permit(:playername, :position, :team_id, :team_id)
     end
 end

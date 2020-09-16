@@ -12,7 +12,7 @@ class PlayersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create player" do
     assert_difference('Player.count') do
-      post players_url, params: { player: { league_id: @player.league_id, player: @player.player, playerName: @player.playerName, position: @player.position, trainer_id: @player.trainer_id } }, as: :json
+      post players_url, params: { player: { playername: @player.playername, position: @player.position, team_id: @player.team_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class PlayersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update player" do
-    patch player_url(@player), params: { player: { league_id: @player.league_id, player: @player.player, playerName: @player.playerName, position: @player.position, trainer_id: @player.trainer_id } }, as: :json
+    patch player_url(@player), params: { player: { playername: @player.playername, position: @player.position, team_id: @player.team_id } }, as: :json
     assert_response 200
   end
 
