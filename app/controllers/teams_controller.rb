@@ -38,8 +38,12 @@ class TeamsController < ApplicationController
 
   # DELETE /teams/1
   def destroy
+
+    @team.players.destroy_all
     @team.destroy
+    render json: @team, include: [:players]
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
