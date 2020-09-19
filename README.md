@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+FootBall Masters - single page soccer app.
+ FootBall Masters user's can get acces to information of soccer leagues of every country.
+  They can select countries to get information about teams and players of that country, 
+ Users can pick players from any league to create their favorite teams and name the team whatever you want to.
+ Teams are modifiable, so you can edit, add or delete players.
 
-Things you may want to cover:
+ Source - API-FOOTBALL
+ 
+NSTRUCTIONS:
+RAILS BACK END:
 
-* Ruby version
+To run this app on your local environment, clone this repository.
 
-* System dependencies
+Navigate to the football-masters-api directory and run:
 
-* Configuration
+bundle install
 
-* Database creation
+rails db:migrate
 
-* Database initialization
+Then ran the server with the rails s command
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This will boot up the Rails web server at http://localhost:3000.
