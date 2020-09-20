@@ -43,21 +43,21 @@ class TeamsController < ApplicationController
     @team.destroy
     render json: @team, include: [:players]
   end
+  
+    private
+      # Use callbacks to share common setup or constraints between actions.
+      def set_team
+        @team = Team.find(params[:id])
+      end
+  
+      # Only allow a trusted parameter "white list" through.
+      def team_params
+        params.require(:team).permit(:username, players_attributes: [:playerN, :playerP])
+      end
+  end
+       
+          
 
-
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_team
-      @team = Team.find(params[:id])
-    end
-
-    # Only allow a trusted parameter "white list" through.
-    def team_params
-      params.require(:team).permit(:username, players_attributes: [:playerN, :playerP])
-    end
-end
-     
-        
 
 
 
